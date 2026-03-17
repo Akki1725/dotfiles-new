@@ -29,3 +29,7 @@ alias ll="eza -l"
 alias la="eza -la"
 alias tree="eza --tree"
 
+# custom commands
+run() {
+  g++ "$1" -o "${1%.cpp}" && "./${1%.cpp}"
+}
