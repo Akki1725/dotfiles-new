@@ -4,6 +4,10 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
+# vim
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+
 # better completion
 autoload -Uz compinit
 compinit
@@ -33,3 +37,5 @@ alias tree="eza --tree"
 run() {
   g++ "$1" -o "${1%.cpp}" && "./${1%.cpp}"
 }
+
+export PATH=$HOME/.local/bin:$PATH
